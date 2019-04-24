@@ -1,6 +1,4 @@
-
-    
-    <template>
+<template>
   <header class="header">
     <nav class="navigation">
       <section class="navigation_icon">
@@ -10,19 +8,19 @@
       </section>
       <ul class="navigation_ul">
         <li>
-          <router-link :to="{path:'/#home'}">
+          <router-link :to="{path:'/'}">
             Inicio
           </router-link>
         </li>
         <li>
-          <router-link :to="{path:'/#howWorks'}">
+          <router-link :to="{path:'/howWorks'}">
             ¿Cómo funciona?
           </router-link>
           <!-- <a href="#howWorks">¿Cómo funciona?</a> -->
         </li>
 
         <li>
-          <router-link :to="{path:'/#about'}">
+          <router-link :to="{path:'/about'}">
             ¿Quiénes somos?
           </router-link>
           <!-- <a href="#aboutMe">¿Quiénes somos?</a> -->
@@ -31,13 +29,16 @@
           <h2>· Tipos de contratos</h2>
         </li>
         <li>
-          <router-link :to="{path:'/crearcontrato#alquiler'}">Contrato de alquiler</router-link>
+          <router-link :to="{path:'/contratoalquiler'}">Contrato de alquiler</router-link>
+        </li>
+          <li>
+          <router-link :to="{path:'/contratocompraventa'}">Contrato de compraventa</router-link>
         </li>
         <li>
           <h2>· Otros documentos</h2>
         </li>
         <li>
-          <router-link :to="{path:'/crearavisolegal#web'}">Contrato de alquiler</router-link>
+          <router-link :to="{path:'/crearavisolegal'}">Aviso legal</router-link>
         </li>
       </ul>
     </nav>

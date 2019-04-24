@@ -11,8 +11,7 @@
       <div class="header-content">
         <h1>Crea tu contrato de forma rápida y sencilla.</h1>
         <p>
-          Escribe tu contracto, guiado a través de nuestra web con la política del gobierno de España, es fácil rellena el formulario y una vez que este
-          todo listo.
+          Personaliza tus contratos y documentos legales de forma online.
         </p>
         <h2>¡Listo para descargar!</h2>
       </div>

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import CreateContract from '@/components/CreateContract'
+import RentContract from '@/components/RentContract'
+import BuyContract from '@/components/BuyContract'
 import HowWorks from '@/components/HowWorks'
 import About from '@/components/About'
 import Legal from '@/components/Legal'
@@ -18,9 +19,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/crearcontrato',
-      name: 'CreateContract',
-      component: CreateContract
+      path: '/contratoalquiler',
+      name: 'RentContract',
+      component: RentContract
+    },
+    {
+      path: '/contratocompraventa',
+      name: 'BuyContract',
+      component: BuyContract
     },
     {
       path: '/comofunciona',
