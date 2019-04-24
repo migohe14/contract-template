@@ -131,7 +131,11 @@
           <h2>CONTRATO DE COMPRAVENTA DE VIVIENDA</h2>
 
 <!-- Ciudad y fecha actual -->
-<p>En Madrid, a treinta de julio de 2001.</p>
+<p>En Madrid, a {{    new Date().getUTCDate() +
+        "/" +
+        (new Date().getMonth() + 1) +
+        "/" +
+        new Date().getFullYear(),}}</p>
 
 <h3>REUNIDOS</h3>
 <!-- Datos personales de las partes -->
