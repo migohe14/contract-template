@@ -13,14 +13,14 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{path:'/howWorks'}">
+          <router-link :to="{path:'/#howWorks'}">
             ¿Cómo funciona?
           </router-link>
           <!-- <a href="#howWorks">¿Cómo funciona?</a> -->
         </li>
 
         <li>
-          <router-link :to="{path:'/about'}">
+          <router-link :to="{path:'/#about'}">
             ¿Quiénes somos?
           </router-link>
           <!-- <a href="#aboutMe">¿Quiénes somos?</a> -->
