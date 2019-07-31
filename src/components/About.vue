@@ -59,6 +59,26 @@
           </ul>
         </div>
       </div>
+      <div class="flex-item-about">
+        <div class="box" data-aos="zoom-in">
+          <img src="../assets/images/MTXDevp.jpg" class="box-img">
+          <h1>Rafael Valls Sánchez</h1>
+          <h5>Desarrollador Full Stack </h5>
+          <p>Apasionado de las tecnologías mas vanguardistas.</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/mtxdevp/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/MTXDevp" target="_blank">
+                <i class="fab fa-github-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 </template>
