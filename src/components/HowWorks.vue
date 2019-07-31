@@ -66,9 +66,10 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 94vh;
   background-color: #e7ebec;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .flex-item:nth-child(1) {
