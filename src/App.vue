@@ -69,11 +69,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Vidaloka", serif;
+  font-family: "Vidaloka", serif !important;
   color: #ecf0f1;
 }
 p {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif !important;
   color: #ecf0f1;
 }
 </style>

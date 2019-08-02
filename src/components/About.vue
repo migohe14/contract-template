@@ -7,7 +7,7 @@
       <div class="flex-item-about">
         <div class="box" data-aos="zoom-in">
           <img src="../assets/images/miguel.jpg" class="box-img">
-          <h1>Miguel Gonzáles Herrera</h1>
+          <h1>Miguel González Herrera</h1>
           <h5>Desarrollador web - Graduado en derecho</h5>
           <p>Interesado en el desarrollo de tecnología aplicada al sector legal.</p>
           <ul>
@@ -44,7 +44,7 @@
           <img src="../assets/images/salva.jpg" alt class="box-img">
           <h1>Salvador Henares Jiménez</h1>
           <h5>Desarrolador web - Frontend - Full Stack</h5>
-          <p>Apasionado de la tecnología, programación y de los videojuegos.</p>
+          <p>Apasionado de la tecnología, programación y los videojuegos.</p>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/salvadorhenaresjimenez/" target="_blank">
@@ -53,6 +53,26 @@
             </li>
             <li>
               <a href="https://github.com/SahJ00" target="_blank">
+                <i class="fab fa-github-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-item-about">
+        <div class="box" data-aos="zoom-in">
+          <img src="../assets/images/MTXDevp.jpg" class="box-img">
+          <h1>Rafael Valls Sánchez</h1>
+          <h5>Desarrollador Full Stack</h5>
+          <p>Apasionado de las tecnologías mas vanguardistas.</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/mtxdevp/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/MTXDevp" target="_blank">
                 <i class="fab fa-github-square"></i>
               </a>
             </li>
@@ -73,7 +93,7 @@
 }
 .content {
   height: 100vh;
-
+  margin-top: 50px;
 }
 .box {
   width: 450px;

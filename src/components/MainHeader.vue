@@ -38,7 +38,11 @@
           <h2>· Otros documentos</h2>
         </li>
         <li>
+<<<<<<< HEAD
+          <router-link :to="{path:'/crearavisolegal#web'}">Aviso legal</router-link>
+=======
           <router-link :to="{path:'/crearavisolegal'}">Aviso legal</router-link>
+>>>>>>> efbfd8f7ba4e83b8d536f68c5031994841c78e59
         </li>
       </ul>
     </nav>

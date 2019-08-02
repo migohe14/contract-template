@@ -17,7 +17,6 @@
       </div>
     </header>
     <HowWorks></HowWorks>
-    <!-- <OurJobs></OurJobs> -->
     <AboutMe></AboutMe>
   </section>
 </template>
