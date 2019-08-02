@@ -4,6 +4,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebaseConfig.js
+src\firebaseConfig.js
 
 
 # Editor directories and files
@@ -13,4 +15,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-src/firebaseConfig.js
+firebaseConfig.js
+src\firebaseConfig.js
