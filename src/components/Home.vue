@@ -2,17 +2,15 @@
   <template>
   <section>
     <!-- <main-header></main-header> -->
-    <a name="home"/>
+    <a name="home" />
     <header class="v-header container">
       <div class="fullscreen-video-wrap">
-        <img src="../assets/images/typing.png">
+        <img src="../assets/images/typing.png" />
       </div>
       <div class="header-overlay"></div>
       <div class="header-content">
         <h1>Crea tu contrato de forma rápida y sencilla.</h1>
-        <p>
-          Personaliza tus contratos y documentos legales de forma online.
-        </p>
+        <p>Personaliza tus contratos y documentos legales de forma online.</p>
         <h2>¡Listo para descargar!</h2>
       </div>
     </header>
@@ -23,7 +21,7 @@
 
 
 <style>
- section {
+section {
   background: #ecf0f1;
 }
 
@@ -172,6 +170,9 @@ import HowWorks from "./HowWorks";
 import AboutMe from "./About";
 import OurJobs from "./OurJobs";
 
+
+
+
 export default {
   components: {
     MainHeader,
@@ -179,7 +180,8 @@ export default {
     AboutMe,
     OurJobs
     // MainFooter
-  }
+  },
+
 };
 </script>
 

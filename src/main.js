@@ -7,11 +7,11 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import firebaseConfig from './firebaseConfig'
+// import firebaseConfig from './firebaseConfig'
 import VueFire from 'vuefire'
-import firebase from 'firebase/app'
+// import firebase from 'firebase/app'
 Vue.use(VueFire)
-firebase.initializeApp(firebaseConfig)
+// firebase.initializeApp(firebaseConfig)
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
