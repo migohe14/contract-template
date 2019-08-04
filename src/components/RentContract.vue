@@ -309,7 +309,7 @@
         >Generar contrato</button>-->
         <button
           class="btn btn-success mt-3 mb-5"
-          v-if="city || date || owner || tenant || address || rent || bail"
+          v-if="city && date && owner && tenant && address && rent && bail"
           v-on:click="generatePdf()"
           :disabled="disabled == 0 ? true : false"
         >Generar contrato</button>
