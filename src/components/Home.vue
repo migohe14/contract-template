@@ -12,6 +12,7 @@
         <h1>Crea tu contrato de forma rápida y sencilla.</h1>
         <p>Personaliza tus contratos y documentos legales de forma online.</p>
         <h2>¡Listo para descargar!</h2>
+        <h3>{{this.totalScore['0']}}</h3>
       </div>
     </header>
     <HowWorks></HowWorks>
@@ -169,9 +170,8 @@ import HowWorks from "./HowWorks";
 // import MainFooter from "./MainFooter";
 import AboutMe from "./About";
 import OurJobs from "./OurJobs";
-
-
-
+import request from "../services/score.service";
+const restRequestService = new request();
 
 export default {
   components: {
@@ -181,7 +181,21 @@ export default {
     OurJobs
     // MainFooter
   },
-
+  data() {
+    return {
+      scores: [],
+      totalScore: [],
+      // contractScore: [],
+      // contractName: "buy-contract"
+    };
+  },
+  created() {
+    restRequestService.getAllScores(this.scores, this.totalScore);
+    // restRequestService.getScore(this.contractName, this.contractScore);
+    // setTimeout(()=>{
+    //   restRequestService.UpdateScore(this.contractName, this.contractScore);
+    // }, 2000)
+  }
 };
 </script>
 

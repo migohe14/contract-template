@@ -171,7 +171,7 @@
 <script>
 import MainHeader from "./MainHeader";
 import Sintoga from "./Sintoga";
-import FileSaver from 'file-saver';
+// import FileSaver from 'file-saver';
 export default {
   components: {
     MainHeader,

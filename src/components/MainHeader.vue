@@ -8,7 +8,7 @@
       </section>
       <ul class="navigation_ul">
         <li>
-          <router-link :to="{path:'/'}">Inicio</router-link>
+          <router-link :to="{path:'/#home'}">Inicio</router-link>
         </li>
         <li>
           <router-link :to="{path:'/#howWorks'}">¿Cómo funciona?</router-link>
@@ -32,9 +32,8 @@
           <h2>· Otros documentos</h2>
         </li>
         <li>
-          <<<<<<< HEAD
-          <router-link :to="{path:'/crearavisolegal#web'}">Aviso legal</router-link>=======
-          <router-link :to="{path:'/crearavisolegal'}">Aviso legal</router-link>>>>>>>> efbfd8f7ba4e83b8d536f68c5031994841c78e59
+          <router-link :to="{path:'/crearavisolegal#web'}">Aviso legal</router-link>
+          <router-link :to="{path:'/crearavisolegal'}">Aviso legal</router-link>
         </li>
       </ul>
     </nav>
@@ -282,46 +281,10 @@ html {
 </style>
 
 <script>
-import db from "@/db";
+
+
+
 export default {
-  data() {
-    return {
-      scores: [],
-      totalScore: ""
-    };
-  },
-  created() {
-    // Obtener datos por ID
-    let buyContractRef = db.collection("scores").doc("buy-contract");
-    buyContractRef.get().then(doc =>{
-      if(doc.exists) {
-        console.log("buy-contract: ", doc.data());
-      }
-    })
 
-    // Obtener todos los datos
-    db.collection("scores")
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          this.scores.push(doc.data());
-          //Obtener el score total
-          this.totalScore = parseInt(doc.data().score + this.totalScore);
-        });
-        console.log(this.scores);
-        console.log("totalScore: " + this.totalScore);
-      });
-
-      // Modificar datos de una ID concreta
-      buyContractRef.set({
-        name:"buy-contract",
-        score: 12
-      }).then(()=>{
-        console.log("Se ha actualizado correctamente");
-      }).catch((error)=>{
-        console.log("Se ha producido un error: ", error);
-      })
-  }
 };
 </script>
