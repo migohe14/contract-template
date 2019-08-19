@@ -301,12 +301,6 @@
           <br />
           <p>...............</p>
         </div>
-
-        <!-- <button
-          class="btn btn-success mt-3 mb-5"
-          v-on:click="generatePdf()"
-          :disabled="disabled == 1 ? true : false"
-        >Generar contrato</button>-->
         <button
           class="btn btn-success mt-3 mb-5"
           v-if="city && date && owner && tenant && address && rent && bail"
@@ -327,10 +321,10 @@
 
 <script>
 import jsPDF from "jspdf";
-import MainHeader from "./MainHeader";
-import MainFooter from "./MainFooter";
-import Sintoga from "./Sintoga";
-import request from "../services/score.service";
+import MainHeader from "../MainHeader";
+import MainFooter from "../MainFooter";
+import Sintoga from "../Sintoga";
+import request from "../../services/score.service";
 const restRequestService = new request();
 export default {
   components: {
@@ -354,23 +348,38 @@ export default {
       address: "",
       rent: "",
       bail: "",
+      contractName: "rent-contract",
       contractScore: [],
-      contractName: "buy-contract",
       disabled: 1
     };
+  },
+  created() {
+    restRequestService.getScore(this.contractName, this.contractScore);
   },
   methods: {
     generatePdf() {
       var doc = new jsPDF();
-
       doc.fromHTML($("#test").html(), 15, 15, {
         width: 170
       });
       doc.save("contrato.pdf");
-      restRequestService.getScore(this.contractName, this.contractScore);
-      setTimeout(() => {
-        restRequestService.UpdateScore(this.contractName, this.contractScore);
-      }, 2000);
+      restRequestService.UpdateScore(this.contractName, this.contractScore);
+      this.resetForm();
+    },
+    resetForm() {
+      (this.city = ""),
+        (this.dateFirm =
+          new Date().getUTCDate() +
+          "/" +
+          (new Date().getMonth() + 1) +
+          "/" +
+          new Date().getFullYear()),
+        (this.date = ""),
+        (this.owner = ""),
+        (this.tenant = ""),
+        (this.address = ""),
+        (this.rent = ""),
+        (this.bail = "");
     }
   }
 };

@@ -7,21 +7,23 @@ export default class request {
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          //   console.log(doc.data());
           scores.push(doc.data());
           //Obtener el score total
-          // console.log(doc.data().score)
           scoreSum = parseInt(doc.data().score + scoreSum);
-
-
-
         });
         totalScore.push(scoreSum);
         console.log("totalScore: " + scoreSum);
-        //   console.log(scores);
-        // return totalScore;
-
       });
+  }
+
+  getAllContract(allContract) {
+    var contractSum = 0
+    db.collection("scores").get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        contractSum += 1;
+      });
+      allContract.push(contractSum)
+    });
   }
 
   getScore(contractName, contractScore) {
@@ -30,13 +32,10 @@ export default class request {
     contractRef.get().then(doc => {
       if (doc.exists) {
         contractScore.push(doc.data().score);
-        //   contractScore.push(doc.data());
-
-        //   console.log(contractScore['0'].score)
-
+        // contractScore.push(doc.data());
+        // console.log(contractScore['0'])
       }
-    })
-
+    });
   }
 
   UpdateScore(contractName, contractScore) {
@@ -47,8 +46,6 @@ export default class request {
       score: (parseInt(contractScore['0']) + 1)
     }).then(() => {
       console.log("Se ha actualizado correctamente");
-
-
     }).catch((error) => {
       console.log("Se ha producido un error: ", error);
     })

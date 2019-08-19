@@ -12,7 +12,18 @@
         <h1>Crea tu contrato de forma rápida y sencilla.</h1>
         <p>Personaliza tus contratos y documentos legales de forma online.</p>
         <h2>¡Listo para descargar!</h2>
-        <h3>{{this.totalScore['0']}}</h3>
+        <div class="info-container pt-3">
+          <div class="info-item mr-2">
+            <h5 class="p-2">Más de</h5>
+            <h3>{{this.totalScore['0']}}</h3>
+            <h5 class="p-2">contratos realizados</h5>
+          </div>
+          <div class="info-item ml-2">
+            <h5 class="p-2">Más de</h5>
+            <h3>{{this.allContract['0']}}</h3>
+            <h5 class="p-2">tipos de contratos</h5>
+          </div>
+        </div>
       </div>
     </header>
     <HowWorks></HowWorks>
@@ -108,6 +119,68 @@ p {
   }
 }
 
+.info-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.info-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  background-color: #ecf0f1;
+  opacity: 0.9;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 2px solid #015175;
+}
+
+.info-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  background-color: #ecf0f1;
+  opacity: 0.9;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 2px solid #015175;
+}
+
+.info-item h3,
+.info-item h5 {
+  color: #03a9f4 !important;
+}
+
 /* @media(max-width:960px) {
   .container {
     padding-right: 3rem;
@@ -185,12 +258,14 @@ export default {
     return {
       scores: [],
       totalScore: [],
+      allContract: []
       // contractScore: [],
       // contractName: "buy-contract"
     };
   },
   created() {
     restRequestService.getAllScores(this.scores, this.totalScore);
+    restRequestService.getAllContract(this.allContract);
     // restRequestService.getScore(this.contractName, this.contractScore);
     // setTimeout(()=>{
     //   restRequestService.UpdateScore(this.contractName, this.contractScore);
