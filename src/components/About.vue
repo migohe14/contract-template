@@ -59,7 +59,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex-item-about">
+      <div class="flex-item-about mb-2">
         <div class="box" data-aos="zoom-in">
           <img src="../assets/images/MTXDevp.jpg" class="box-img">
           <h1>Rafael Valls Sánchez</h1>

@@ -1,6 +1,6 @@
 <template>
   <div>
-     <a name="alquiler"></a>
+    <a name="alquiler"></a>
     <section class="wrap-contract">
       <div class="contract-item">
         <b-row>
@@ -295,14 +295,18 @@
             <strong>FIRMAN</strong>
           </p>
           <p>EL ARRENDADOR/A</p>
-          <br>
+          <br />
           <p>...............</p>
           <p>ARRENDATARIO/A</p>
-          <br>
+          <br />
           <p>...............</p>
         </div>
-
-        <button class="btn btn-success mt-3 mb-5" v-on:click="generatePdf()">Generar contrato</button>
+        <button
+          class="btn btn-success mt-3 mb-5"
+          v-if="city && date && owner && tenant && address && rent && bail"
+          v-on:click="generatePdf()"
+          :disabled="disabled == 0 ? true : false"
+        >Generar contrato</button>
       </div>
     </section>
     <div class="container">
@@ -311,15 +315,17 @@
 
     <!-- <div class="containerFluid">
       <main-footer></main-footer>
-    </div> -->
+    </div>-->
   </div>
 </template>
 
 <script>
 import jsPDF from "jspdf";
-import MainHeader from "./MainHeader";
-import MainFooter from "./MainFooter";
-import Sintoga from "./Sintoga";
+import MainHeader from "../MainHeader";
+import MainFooter from "../MainFooter";
+import Sintoga from "../Sintoga";
+import request from "../../services/score.service";
+const restRequestService = new request();
 export default {
   components: {
     MainHeader,
@@ -341,17 +347,39 @@ export default {
       tenant: "",
       address: "",
       rent: "",
-      bail: ""
+      bail: "",
+      contractName: "rent-contract",
+      contractScore: [],
+      disabled: 1
     };
+  },
+  created() {
+    restRequestService.getScore(this.contractName, this.contractScore);
   },
   methods: {
     generatePdf() {
       var doc = new jsPDF();
-
       doc.fromHTML($("#test").html(), 15, 15, {
         width: 170
       });
       doc.save("contrato.pdf");
+      restRequestService.UpdateScore(this.contractName, this.contractScore);
+      this.resetForm();
+    },
+    resetForm() {
+      (this.city = ""),
+        (this.dateFirm =
+          new Date().getUTCDate() +
+          "/" +
+          (new Date().getMonth() + 1) +
+          "/" +
+          new Date().getFullYear()),
+        (this.date = ""),
+        (this.owner = ""),
+        (this.tenant = ""),
+        (this.address = ""),
+        (this.rent = ""),
+        (this.bail = "");
     }
   }
 };
@@ -365,8 +393,6 @@ $(function() {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
-
 .wrap-contract {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -398,15 +424,13 @@ $(function() {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-   width: 100%;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: 10%;
   margin-left: 10%;
-
 }
 .contract-item:nth-child(1) p {
   color: black;
 }
-
 </style>

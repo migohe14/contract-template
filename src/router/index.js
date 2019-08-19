@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import RentContract from '@/components/RentContract'
-import BuyContract from '@/components/BuyContract'
+import RentContract from '@/components/contract/RentContract'
+import BuyContract from '@/components/contract/BuyContract'
 import HowWorks from '@/components/HowWorks'
 import About from '@/components/About'
 import Legal from '@/components/Legal'
@@ -12,8 +12,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Home',
       component: Home
