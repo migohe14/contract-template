@@ -19,3 +19,8 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+For dockerize image
+- docker build -t contract-generator:1.0 .
+- docker run -p 8080:8080 -d --name contract-generator contract-generator:1.0
