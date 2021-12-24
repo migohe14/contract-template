@@ -1,4 +1,6 @@
 # contract-generator
+Web para cumplimentar y descargar de forma gratuita contratos y documentación legal en distintos formatos (PDF, html). Todo se realiza desde el cliente sin almacenar ningún dato personal.
+www.creamicontrato.es
 
 > A Vue.js project
 
