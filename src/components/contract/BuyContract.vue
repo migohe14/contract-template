@@ -390,7 +390,7 @@ export default {
     };
   },
   created() {
-    restRequestService.getScore(this.contractName, this.contractScore);
+    // restRequestService.getScore(this.contractName, this.contractScore);
   },
   methods: {
     generatePdf() {
@@ -400,7 +400,7 @@ export default {
         width: 170
       });
       doc.save("contrato.pdf");
-      restRequestService.UpdateScore(this.contractName, this.contractScore);
+      // restRequestService.UpdateScore(this.contractName, this.contractScore);
       this.resetForm();
     },
     resetForm() {

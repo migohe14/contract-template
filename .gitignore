@@ -1,11 +1,10 @@
 .DS_Store
 node_modules/
 /dist/
+/src/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/src/firebaseConfig.js
-
 
 # Editor directories and files
 .idea
@@ -14,4 +13,3 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-/src/db/index.js

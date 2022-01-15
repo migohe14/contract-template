@@ -16,7 +16,7 @@
           <div class="info-item mr-2">
             <h5 class="p-2">Más de</h5>
             <h3>{{this.totalScore['0']}}</h3>
-            <h5 class="p-2">contratos realizados</h5>
+            <h5 class="p-2">contratos descargados</h5>
           </div>
           <div class="info-item ml-2">
             <h5 class="p-2">Más de</h5>
@@ -264,8 +264,8 @@ export default {
     };
   },
   created() {
-    restRequestService.getAllScores(this.scores, this.totalScore);
-    restRequestService.getAllContract(this.allContract);
+    // restRequestService.getAllScores(this.scores, this.totalScore);
+    // restRequestService.getAllContract(this.allContract);
     // restRequestService.getScore(this.contractName, this.contractScore);
     // setTimeout(()=>{
     //   restRequestService.UpdateScore(this.contractName, this.contractScore);
